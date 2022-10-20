@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PR</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      list-style: none;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+    ul {
+      padding-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      overflow: hidden;
+      max-height:1060px;
+    }
+    ul.active {
+      max-height: none;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 22%;
+      padding: 10px;
+      background-color: #9b31ff;
+      transition: .3s;
+    }
+    li:hover {
+      box-shadow: 5px 5px 10px #999;
+      transform: translateX(-5px) translateY(-5px);
+
+    }
+    li img {
+        min-height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    li div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .category {
+      color: rgba(252, 243, 211, 0.838);
+      margin: 12px 0 7px; 
+    }
+    .title {
+      color: rgb(252, 243, 211);
+      font-size:1.1rem;
+      font-weight: 700;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      margin: 12px 0;
+    }
+    .dsc {
+      overflow: hidden;
+      width:100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin: 1px 0 15px;
+      color: rgba(252, 243, 211, 0.838);
+    }
+    .price {
+      font-size: 1.2rem;
+      padding: 5px 10px;
+      border-radius: 20px;
+      background-color: rgba(252, 243, 211, 0.838);
+      color: rgb(247, 51, 51);
+      font-weight: 700;
+    }
+    .sale {
+      background-color: rgb(247, 51, 51);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    @media (max-width:1024px) {
+      .container {
+        width: 85%;
+      }
+      li {
+        width: 30%;
+      }
+    }
+    @media (max-width:754px) {
+      .container {
+        width: 90%;
+      }
+    }
+    @media (max-width:624px) {
+      .container {
+        width: 95%;
+      }
+      li {
+        width: 45%;
+      }
+    }
+    @media (max-width:424px) {
+      .container {
+        width: 98%;
+      }
+      li {
+        width: 75%;
+      }
+    }
+    .container>div {
+      margin: 35px 0 10px;
+      display: flex;
+      justify-content: center;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      padding: 1px 20px;
+      background-color: #9b31ff;
+      border: 1px solid #9b31ff;
+      cursor: pointer;
+      border-radius: 11px;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-align: center;
+      transition: .3s;
+    }
+    button:hover {
+      border: 1px solid #9b31ff;
+      background-color: transparent;
+    }
+    button img {
+      width: 50px;
+      height: 50px;
+    }
+    .more-btn{
+      display: flex;
+    }
+    .more-btn.inactive {
+      display: none;
+    }
+    .less-btn {
+      display: none;
+    }
+    .less-btn.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>All Products</h1>
+    <ul>
+    </ul>
+    <div>
+      <button class="more-btn">See more <img src="./down-arrow.gif" alt=""></button>
+      <button class="less-btn">See less <img src="./up-arrow.gif" alt=""></button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

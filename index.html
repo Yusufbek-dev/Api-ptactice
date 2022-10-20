@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js</title>
+  <style>
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+    form {
+      margin: 10% auto 0;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 50px;
+      row-gap: 25px;
+      background-color: rgba(0, 59, 6, 0.6);
+      border-radius: 20px;
+    }
+    #name, #surname, #phone {
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      padding: 19px 15px;
+      background-color: #ffff;
+      color: #000;
+    }
+
+    #name::placeholder,
+    #surname::placeholder,
+    #phone::placeholder {
+      color: rgba(0, 0, 0, 0.936);
+    }
+    .submit-btn {
+      padding: 15px;
+      background-color: rgba(165, 7, 7, 0.6);
+      transition: .3s;
+      border-radius: 12px;
+      border: 1px solid rgba(165, 7, 7, 0.6);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      border: 1px solid rgba(45, 2, 2, 0.6);
+      background-color: rgba(45, 2, 2, 0.6);
+
+    }
+
+  </style>
+</head>
+<body>
+  <button>clear Storage</button>
+  <form action>
+    <h1>Register</h1>
+    <input type="text" id="name" name="firstName" placeholder="Your name" required>
+    <input type="mail" id="surname" name="secondName" placeholder="Your Email" required>
+    <input type="number" id="phone" name="phone" placeholder="Your phone number" required>
+    <input class="submit-btn" type="submit" value="submit">
+  </form>
+  <script src="log.js"></script>
+</body>
+</html>
